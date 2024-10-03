@@ -36,7 +36,7 @@ This application is a simplification of the procedure described in the paper lin
 
 - **Python**: Ensure you have Python 3.7 or higher installed. [Download Python](https://www.python.org/downloads/)
 
-### 🔧 Steps
+### Steps
 
 1. **Clone the Repository**:
 
@@ -72,7 +72,7 @@ This application is a simplification of the procedure described in the paper lin
 Launch the application using the following command:
 
 ```bash
-python o1_simulation.py
+python test_time_compute.py
 ```
 
 ### Available Commands
