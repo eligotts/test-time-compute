@@ -1,6 +1,6 @@
 # Test-Time Compute Simulation
 
-Welcome to the Test-Time Compute Simulation Tool! This application allows you to interact with AI agents to answer complex questions, giving you freedom to alter the specifics of your test-time compute algorithm. This project was inspired by this research paper: https://arxiv.org/pdf/2408.03314.
+Welcome to the Test-Time Compute Simulation Tool! This command line application allows you to interact with AI agents to answer complex questions, giving you freedom to alter the specifics of your test-time compute algorithm. This project was inspired by this research paper: https://arxiv.org/pdf/2408.03314.
 
 ## Theory
 This application is a simplification of the procedure described in the paper linked above. Here is a high level overview:
