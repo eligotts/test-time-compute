@@ -1,0 +1,11 @@
+langchain
+langchain-anthropic
+langchain-mistralai
+langchain-openai
+langgraph
+python-dotenv
+PyYAML
+tavily-python
+langchain_community
+langchain_experimental
+prompt_toolkit

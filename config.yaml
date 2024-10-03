@@ -1,0 +1,71 @@
+# Here is where you can choose the llms your agents are running on. 
+# The response_agents are the agents that will be used to generate responses to the user's questions.
+
+# If you want to add more than three, feel free, just make sure each has a UNIQUE name and a valid model.
+# Currently, this only supports OpenAI, Anthropic, and Mistral models. Make sure the names of the models begin
+# with GPT for OpenAI models, Claude for Anthropic models, and Mistral for Mistral models.
+
+# For the other models, as you can see, the names do not need to be unique, however the same rule applies
+# for the name starting with GPT for OpenAI models, Claude for Anthropic models, and Mistral for Mistral models.
+llms:
+  response_agents:
+    - name: GPT
+      model: gpt-4o-mini
+    - name: Claude
+      model: claude-3-haiku-20240307
+    - name: Mistral
+      model: mistral-small-latest
+  difficulty_agent:
+    name: GPT
+    model: gpt-4o-mini
+  commenter_agent:
+    name: GPT
+    model: gpt-4o
+  scorer_agent:
+    name: GPT
+    model: gpt-4o-mini
+  check_done_agent:
+    name: GPT
+    model: gpt-4o-mini
+  answer_summary_agent:
+    name: GPT
+    model: gpt-4o-mini
+  final_summary_agent:
+    name: GPT
+    model: gpt-4o-mini
+
+# Here you can set the tools that will be available to the user.
+# Currently the only tools available are TavilySearchResults and PythonREPL, but planning on adding more.
+
+tools:
+  - name: TavilySearchResults
+    max_results: 5
+  - name: PythonREPL
+
+# Here you can set the compute resource distribution given the difficulty level. If you want to add more 
+# difficulty levels, feel free, just make sure to edit the difficulty system prompt as well.
+
+# Threads is the different number of responses that will exist at a certain time
+# Beams is the number of responses that will be kept for the next round (these will be duplicated up until all threads are full)
+# Revisions is the number of revisions allowed for each answer.
+
+difficulty_settings:
+  1:
+    threads: 3
+    beams: 3
+    revisions: 3
+  2:
+    threads: 4
+    beams: 3
+    revisions: 2
+  3:
+    threads: 5
+    beams: 3
+    revisions: 1
+
+# Here you can set the starting settings for the system.
+# Threads is the number of responses that will be generated to start, prior to assessing difficulty.
+# Starting_agent is the agent that will be used to generate the starting responses - ENSURE it is the NAME of one of the response_agents.
+start_settings:
+  threads: 3
+  starting_agent: GPT
